@@ -3,6 +3,7 @@
 ## Set up the client.
 
 npm install
-npm run dev
+webpack
+node index.js
 
 
