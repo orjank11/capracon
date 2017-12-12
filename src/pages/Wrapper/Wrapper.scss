@@ -1,0 +1,13 @@
+.Wrapper {
+  main {
+    margin: 0 auto;
+    max-width: 1000px;
+    > h1 {
+      display: inline-block;
+    }
+    > img {
+      float: right;
+      height: 150px;
+    }
+  }
+}

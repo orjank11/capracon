@@ -1,0 +1,113 @@
+@import "../mixins/mixins.scss";
+
+body {
+  margin: 0px;
+  font-family: "Avenir Next";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  background-color: #F5F4F5;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+input[type="number"], input[type="text"], input[type="email"], input[type="tel"],  {
+  font-size: 16px;
+  border: 0px;
+  width: 100%;
+  line-height: 16px;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  background: transparent;
+  &:focus, &:active {
+    outline: none;
+    border-bottom: 2px solid #290742;
+    margin-bottom: 9px;
+  }
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 3;
+}
+h2, h3, h4, h5 {
+  font-weight: 400;
+}
+
+footer {
+  padding-top: 50px;
+  display: block;
+  text-align: center;
+  @include clearfix();
+}
+
+ul {
+  padding-left: 0px;
+}
+
+label {
+  margin-top: 25px;
+  display: block;
+}
+
+input[type=checkbox] {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  margin-right: 25px;
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type=checkbox]:before {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    border: solid 2px #290742;
+    border-radius: 3px;
+    background-color: white;
+}
+input[type=checkbox]:focus:before {
+  border: solid 2px palevioletred;
+}
+
+input[type=checkbox]:checked:before {
+    background-size: 11px 11px;
+    background-color: #290742;
+}
+
+.sr-only {
+  opacity: 0;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.error {
+  display: block;
+  color: red;
+}
+
+.ConsentGender {
+  display: inline-block;
+  button {
+    background: transparent;
+    border: 0;
+    font-size: 14px;
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+// input[type=checkbox]:focus:before {
+//   border: solid 2px #FF5F2F;
+// }
