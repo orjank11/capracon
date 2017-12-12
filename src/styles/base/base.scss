@@ -4,6 +4,7 @@ body {
   margin: 0px;
   font-size: 16px;
   font-weight: 500;
+  font-family: "Roboto", sans-serif;
   *,
   *:after,
   *:before {
@@ -11,12 +12,42 @@ body {
   }
 }
 
+h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-weight: 400;
+  font-weight: bold;
+}
+
+header {
+  background-image: url("//images.unsplash.com/photo-1467250123231-1813550b3fd5?auto=format&fit=crop&w=3289&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  svg {
+    width: 100px;
+    height: 100px;
+  }
+  article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: calc(100vh - 100px);
+    padding-left: 24px;
+    padding-right: 24px;
+    h1 {
+    }
+  }
 }
 
 footer {
@@ -32,4 +63,3 @@ footer {
   top: -9999px;
   left: -9999px;
 }
-
