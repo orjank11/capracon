@@ -24,7 +24,7 @@ const saturday = [
     type: "food",
     speaker: "",
     time: "19:00 -",
-    header: "Pause",
+    header: "Middag på Tao",
     article: ""
   },
   {

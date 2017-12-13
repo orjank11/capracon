@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import FaBeer from "react-icons/lib/fa/beer";
 
 import {
   VerticalTimeline,
@@ -12,6 +11,8 @@ import "./LandingPage.scss";
 
 import friday from "../../constants/friday";
 import saturday from "../../constants/saturday";
+
+import Icon from "../../components/Icon";
 
 const getBackground = type =>
   type === "tech" ? "rgb(33, 150, 243)" : "rgb(243, 150, 33)";
@@ -30,8 +31,21 @@ class LandingPage extends Component {
       selectedDay === "friday" ? fridaySpeakers : saturdaySpeakers;
     return (
       <section className="LandingPage">
-        <h1>Landing page</h1>
-
+        <nav>
+          <h1>Program</h1>
+          <button
+            className={(selectedDay === "friday" && "active") || ""}
+            onClick={() => this.setState({ selectedDay: "friday" })}
+          >
+            Fredag
+          </button>
+          <button
+            className={(selectedDay === "saturday" && "active") || ""}
+            onClick={() => this.setState({ selectedDay: "saturday" })}
+          >
+            Lørdag
+          </button>
+        </nav>
         <VerticalTimeline>
           {speakers.map(({ type, speaker, time, header, article }) => {
             return (
@@ -40,7 +54,7 @@ class LandingPage extends Component {
                 className="vertical-timeline-element--work"
                 date={time}
                 iconStyle={{ background: getBackground(type), color: "#fff" }}
-                icon={<FaBeer />}
+                icon={<Icon type={type} />}
               >
                 <h3 className="vertical-timeline-element-title">{header}</h3>
                 <h4 className="vertical-timeline-element-subtitle">
